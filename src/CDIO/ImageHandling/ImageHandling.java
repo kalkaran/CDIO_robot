@@ -32,6 +32,6 @@ public class ImageHandling {
 //            Core.circle( src, center, 3, new Scalar(0,255,0), -1, 8, 0 );
 //            // circle outline
 //            Core.circle( src, center, radius, new Scalar(0,0,255), 3, 8, 0 );
-        }
-    }
+//        }
+//    }
 }
