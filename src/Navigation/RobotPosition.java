@@ -20,8 +20,8 @@ public class RobotPosition {
         Robot robot = new Robot();
         Map map = new Map();
 
-        robot.setRobotOrientation(0);
-        robot.setRobotXCoordinate(0);
+        //robot.setRobotOrientation(0);
+        //robot.setRobotXCoordinate(0);
 
     }
 
