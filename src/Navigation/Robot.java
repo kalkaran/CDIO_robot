@@ -22,11 +22,15 @@ public class Robot {
         Map map = new Map();
 
 
-        robot.setRobotXCoordinate(0);
-        robot.setRobotYCoordinate(0);
+        robot.setRobotXCoordinate(20);
+        robot.setRobotYCoordinate(5);
 
 
-        robot.changeRobotOrientation(0);
+        robot.changeRobotOrientation(95);
+
+        robot.moveRobotDistance(200);
+
+        robot.outPutPosition();
 
     }
 

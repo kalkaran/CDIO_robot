@@ -1,6 +1,8 @@
 package Navigation;
 
 
+import sun.jvm.hotspot.tools.SysPropsDumper;
+
 import static java.lang.Math.sqrt;
 
 public class RobotPosition {
@@ -125,18 +127,28 @@ public class RobotPosition {
 
     }
 
-
     public void moveRobotDistance(int distance) {
         int orientation = getRobotOrientation();
         int startX = getRobotXCoordinate();
         int startY = getRobotYCoordinate();
 
-        int changeY = (int) Math.sin(orientation) * distance;
-        int changeX = (int) Math.cos(orientation) * distance;
+        int changeY = (int) (Math.sin(orientation) * distance);
+        int changeX = (int) (Math.cos(orientation) * distance);
 
         int newX = startX + changeX;
         int newY = startY + changeY;
 
+        this.robotXCoordinate = newX;
+        this.robotYCoordinate = newY;
+
+
+    }
+
+    public void outPutPosition(){
+        String x = Integer.toString(this.robotXCoordinate);
+        String y = Integer.toString(this.robotYCoordinate);
+
+        System.out.println("(" + x + "," + y + ")");
 
     }
 
