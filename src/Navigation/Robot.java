@@ -4,7 +4,6 @@ import static java.lang.Math.sqrt;
 
 public class Robot {
 
-
      /*
       * Changelog Goal has changed from a non camera solution to a camera solution.
       *
@@ -24,8 +23,7 @@ public class Robot {
       * Turning Distance!
       */
 
-
-    private int robotOrientation;
+    private int robotOrientation = 0;
 // These values Below will be hard coded and set based on the robot.
     //Center point is turningcenter of the robot
     // collection point is where the balls have to be to be collected
@@ -63,10 +61,20 @@ public class Robot {
         setRobotOrientation(newOrientation);
     }
 
-    public void setRobotOrientation(int robotOrientation) {
+    /**
+     * is a control method for setting the orientation of the robot
+     * should not be accessed directly use changeRobotOrientation instead.
+     *
+     * Used to control the degrees, and enforce values between 0 and 359
+     * @param robotOrientation
+     *
+     */
+    private void setRobotOrientation(int robotOrientation) {
+        robotOrientation =  robotOrientation % 360;
+
         while(robotOrientation < 0) {
             robotOrientation = robotOrientation + 360;}
-        if (robotOrientation > 360){
+        if (robotOrientation < 0){
             this.robotOrientation = robotOrientation % 360;
         } else {
             this.robotOrientation = robotOrientation;
