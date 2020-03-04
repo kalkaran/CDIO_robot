@@ -1,4 +1,4 @@
-package Navigation;
+package CDIO.Navigation;
 
 import static java.lang.Math.sqrt;
 

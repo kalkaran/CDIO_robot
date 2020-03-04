@@ -1,4 +1,4 @@
-package Navigation;
+package CDIO.Navigation;
 
 public class Map {
 

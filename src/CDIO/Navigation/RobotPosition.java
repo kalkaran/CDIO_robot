@@ -1,6 +1,4 @@
-package Navigation;
-
-import com.sun.xml.internal.xsom.impl.scd.Iterators;
+package CDIO.Navigation;
 
 
 public class RobotPosition {
@@ -17,17 +15,13 @@ public class RobotPosition {
 
     public static void main(String[] args) {
 
-        Robot robot = new Robot();
-        Map map = new Map();
+        CDIO.Navigation.Robot robot = new CDIO.Navigation.Robot();
+        CDIO.Navigation.Map map = new CDIO.Navigation.Map();
 
         //robot.setRobotOrientation(0);
         //robot.setRobotXCoordinate(0);
 
     }
-
-
-
-
 
 
 }
