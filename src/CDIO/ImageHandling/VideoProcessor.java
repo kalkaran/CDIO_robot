@@ -1,6 +1,7 @@
 package CDIO.ImageHandling;
 
 
+import nu.pattern.OpenCV;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfRect;
@@ -37,7 +38,11 @@ public class VideoProcessor {
     public static void main(String[] args) {
         System.out.println("Hello, OpenCV");
         // Load the native library.
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        //System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        OpenCV.loadShared();
+//        String opencvpath = System.getProperty("user.dir") + "/files/";
+//        String libPath = System.getProperty("java.library.path");
+//        System.loadLibrary(opencvpath + Core.NATIVE_LIBRARY_NAME);
         jpgProcessor processor = new jpgProcessor();
         processor.run();
     }
@@ -45,14 +50,18 @@ public class VideoProcessor {
     public static class jpgProcessor {
 
         public void run() {
-            String imgpath = "src/TestImages/IMG_6092.jpg";
-            Mat image = Imgcodecs.imread(getClass().getResource(imgpath).getPath());
+            String imgpath = System.getProperty("user.dir") + "/src/TestImages/IMG_6092.jpg";
+            System.out.println("Working Directory = " +
+                    System.getProperty("user.dir"));
+            System.out.println(imgpath);
+
+            Mat image = Imgcodecs.imread(imgpath);
 
 
             // Save the processed file
-            String filename = imgpath + "_processed";
-            System.out.println(String.format("Writing %s", filename));
-            Imgcodecs.imwrite(filename, image);
+            //String filename = imgpath + "_processed";
+            //System.out.println(String.format("Writing %s", filename));
+            //Imgcodecs.imwrite(filename, image);
         }
     }
 
