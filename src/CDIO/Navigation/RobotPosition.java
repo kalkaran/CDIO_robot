@@ -1,4 +1,4 @@
-package Navigation;
+package CDIO.Navigation;
 
 
 import sun.jvm.hotspot.tools.SysPropsDumper;
