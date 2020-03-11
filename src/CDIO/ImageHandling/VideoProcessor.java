@@ -31,20 +31,21 @@ import org.opencv.objdetect.CascadeClassifier;
 
 public class VideoProcessor {
 
-    public String imgpath = "src/TestImages/IMG_6092.jpg";
+
 
 
     public static void main(String[] args) {
         System.out.println("Hello, OpenCV");
         // Load the native library.
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-//        jpgProcessor processor = new jpgProcessor();
-//        processor.run();
+        jpgProcessor processor = new jpgProcessor();
+        processor.run();
     }
 
-    public class jpgProcessor {
+    public static class jpgProcessor {
 
         public void run() {
+            String imgpath = "src/TestImages/IMG_6092.jpg";
             Mat image = Imgcodecs.imread(getClass().getResource(imgpath).getPath());
 
 
